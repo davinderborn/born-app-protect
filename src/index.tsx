@@ -17,6 +17,6 @@ const BornAppProtect = NativeModules.BornAppProtect
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return BornAppProtect.multiply(a, b);
+export function enableViewSecuring(enabled: boolean): Promise<void> {
+  return BornAppProtect.enabledSecuring(enabled);
 }
