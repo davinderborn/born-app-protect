@@ -20,3 +20,9 @@ const BornAppProtect = NativeModules.BornAppProtect
 export function enableViewSecuring(enabled: boolean): Promise<void> {
   return BornAppProtect.enabledSecuring(enabled);
 }
+
+export function iOSScreenRecordingMirroring(
+  interval: number
+): Promise<boolean> {
+  return BornAppProtect.startScreenMirroringStatusPolling(interval);
+}
